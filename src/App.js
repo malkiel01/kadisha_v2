@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React, { createContext, useEffect, useState } from 'react'
 import './App.css';
 
+// lyouts
+import RouterApp from './routing'
+
+const GlobalContext = createContext()
+
 function App() {
+  const [token, setToken] = useState(localStorage.getItem('token'))
+
+  const varibleGlobal = { 
+    token, setToken,
+    // loading, setLoading,
+    // permission, setPermission,
+    // counterForms, setCounterForms,
+    // formComponents, setFormComponents,
+    // routerName, setRouterName,
+    
+    // dataCemeteries, setDataCemeteries,
+    // nameCemeteries, setNameCemeteries,
+
+    // dataBlocks, setDataBlocks,
+    // nameBlocks, setNameBlocks,
+
+    // dataPlots, setDataPlots,
+    // namePlots, setNamePlots,
+
+    // dataAreaGraves, setDataAreaGraves,
+    // nameAreaGraves, setNameAreaGraves,
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalContext.Provider value={varibleGlobal}>
+      {/* <ThemeProvider theme={theme}> */}
+          <RouterApp/>
+      {/* </ThemeProvider> */}
+    </GlobalContext.Provider>
   );
 }
 
 export default App;
+export {
+  GlobalContext
+}
