@@ -1,10 +1,11 @@
 import axios from "axios"
 
-// const DOMAIN = `http://ec2-18-234-158-111.compute-1.amazonaws.com`
+// const DOMAIN = `https://ec2-18-234-158-111.compute-1.amazonaws.com`
 // const DOMAIN = `http://localhost`
 const DOMAIN = `http://172.31.43.244`
 
-const URL = `${DOMAIN}:3001/`
+const URL = `http://ec2-18-234-138-4.compute-1.amazonaws.com:3001`
+// const URL = `${DOMAIN}:3001/`
 // const URL = `http://localhost:3001/`
 
 export const login = async (data, {setToken, setPermission}) => {
