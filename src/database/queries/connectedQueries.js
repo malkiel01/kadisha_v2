@@ -45,6 +45,7 @@ export const login = async (data, {setToken, setPermission}) => {
             setToken('')
             setPermission('')
             alert('שגיאה בבקשה לשרת. אנא נסה שוב מאוחר יותר.');
+            console.log(error);
           }
           return false
     }
