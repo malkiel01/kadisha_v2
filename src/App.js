@@ -8,11 +8,13 @@ const GlobalContext = createContext()
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'))
+  const [permission, setPermission] = useState(localStorage.getItem('permission')) 
+ 
 
   const varibleGlobal = { 
     token, setToken,
     // loading, setLoading,
-    // permission, setPermission,
+    permission, setPermission,
     // counterForms, setCounterForms,
     // formComponents, setFormComponents,
     // routerName, setRouterName,
