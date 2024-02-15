@@ -6,7 +6,7 @@ const DOMAIN = `http://172.31.43.244`
 
 // const URL = `http://ec2-18-234-138-4.compute-1.amazonaws.com:3001/`
 // const URL = `${DOMAIN}:3001/`
-const URL = `http://18.234.138.4:3001/`
+const URL = `http://35.174.7.136:3001/`
 
 export const login = async (data, {setToken, setPermission}) => {
   let username = data.usernameLogin
