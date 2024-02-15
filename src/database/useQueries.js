@@ -8,7 +8,7 @@ import usePlotQueries from './queries/queriesEntities/usePlotQueries';
 import useAreaGraveQueries from './queries/queriesEntities/useAreaGraveQueries';
 // import usePlotQueries from './queries/queriesEntities/usePlotQueries';
 
-const URL = `http://localhost:3001/`
+const URL = `http://35.174.7.136:3001/`
 
 const URL_SET_PLOT = `api/blocks/addPolts`;
 const URL_SET_AREAGRAVE = `api/areaGrave/addAreaGrave`;
