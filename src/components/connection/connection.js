@@ -2,6 +2,7 @@ import React from 'react';
 import LoginForm from '../login/LoginForm';
 import RegistrationForm from '../registration/RegistrationForm';
 import { Card, Grid } from '@mui/material';
+import TestButton from './testButton';
 
 const Connection = () => {
     return (
@@ -21,6 +22,7 @@ const Connection = () => {
           <LoginForm />
         </Card>
       </Grid>
+      <TestButton />
     </Grid>
 
             <Card sx={{ minWidth: 275, maxWidth: 275, padding: 4 }}>
