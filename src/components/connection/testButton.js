@@ -5,7 +5,7 @@ function TestButton() {
   const handleClick = async () => {
     try {
       // ודא שהכתובת מתאימה לכתובת של השרת שלך
-      const response = await axios.get('http://35.174.7.136/:3002/test');
+      const response = await axios.get('http://35.174.7.136:3002/test');
       console.log(response.data);
       alert('Response from server: ' + response.data);
     } catch (error) {
