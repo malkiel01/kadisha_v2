@@ -20,7 +20,7 @@ export const login = async (data, {setToken, setPermission}) => {
     if (username && username !== '' && password && password !== '') {
         // נסיון גישה לשרת להתחברות
         try {
-            const response = await axios.post(URL + `connection/login`, { username, password })
+            const response = await axios.post(`${URL}connection/login`, { username, password })
 
             // אם השרת אישר את הכניסה, יחזיר טוקן והרשאה
             // צפי חזרת אקסס היא אמת או שקר
@@ -59,7 +59,7 @@ export const registration = async (data, setToken) => {
     if (username && username !== '' && password && password !== '') {
         try {
             // אפשר להשתמש ב axios בכדי לשלוח את שם המשתמש והסיסמה לשרת
-            const response = await axios.post(`${DOMAIN}:3001/connection/registration`, { 
+            const response = await axios.post(`${URL}connection/registration`, { 
                 username, password
              })
 
@@ -87,7 +87,7 @@ export const logout = async (token, setToken, setPermission) => {
         // נסיון גישה לשרת להתחברות
         try {
             // אפשר להשתמש ב axios בכדי לשלוח את שם המשתמש והסיסמה לשרת
-            const response = await axios.post(`${DOMAIN}:3001/connection/logout`, { token })
+            const response = await axios.post(`${URL}connection/logout`, { token })
 
             // אם השרת אישר את הכניסה, ימחק טוקן והרשאה
             // צפי חזרת אקסס היא אמת או שקר
@@ -107,7 +107,7 @@ export const logout = async (token, setToken, setPermission) => {
 }
 export const checkToken = async (token, setToken) => {
   if (token && token !== '') {
-      axios.post(`${DOMAIN}:3001/connection/check_token` , {token
+      axios.post(`${URL}connection/check_token` , {token
       })
       .then((response) => {
         console.log(response.data);
